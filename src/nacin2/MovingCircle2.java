@@ -16,14 +16,14 @@ public class MovingCircle2 extends JPanel implements ActionListener {
 	int x=0;
 	int y=0;
 	int radius=50;
-	int moveX=0;
-	int moveY=0;
+	static int moveX=0;
+	static int moveY=0;
 	KeyHandler keyHandler;
 	
 	/**
 	 * constructor method
 	 */
-	public MovingCircle(){
+	public MovingCircle2(){
 		t.start();
 		keyHandler=new KeyHandler();
 		addKeyListener(keyHandler);
@@ -78,7 +78,7 @@ public class MovingCircle2 extends JPanel implements ActionListener {
 	 * method for moving the circle up, is called when user press the up arrow key. 
 	 * It is used for changing y coordinate of circle
 	 */
-	public void up(){
+	public static void up(){
 		moveX=0;
 		moveY=-1;
 	}
@@ -87,7 +87,7 @@ public class MovingCircle2 extends JPanel implements ActionListener {
 	 * method for moving circle down,is called when user press the down arrow key.
 	 * It is used for changing y coordinate of circle
 	 */
-	public void down(){
+	public static void down(){
 		moveX=0;
 		moveY=1;
 	}
@@ -96,7 +96,7 @@ public class MovingCircle2 extends JPanel implements ActionListener {
 	 * method for moving circle right, is called when user press the right arrow key.
 	 * It is used for changing x coordinate of circle
 	 */
-	public void right(){
+	public static void right(){
 		moveX=1;
 		moveY=0;
 	}
@@ -105,12 +105,12 @@ public class MovingCircle2 extends JPanel implements ActionListener {
 	 * method for moving circle left,is called when user press the left arrow key.
 	 * It is used for changing x coordinate of circle
 	 */
-	public void left(){
+	public static void left(){
 		moveX=-1;
 		moveY=0;
 	}
 	public static void main(String[] args) {
-		MovingCircle content=new MovingCircle();
+		MovingCircle2 content=new MovingCircle2();
 		JFrame window=new JFrame("Moving circle");
 		window.setSize(600,600);
 		window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
