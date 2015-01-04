@@ -6,25 +6,25 @@ import java.awt.event.KeyListener;
 
 
 public class KeyHandler implements KeyListener{
-MovingCircle2 mc=new MovingCircle2();
+
 	@Override
 	public void keyPressed(KeyEvent e) {
 		int keyCode=e.getKeyCode();
 		if(keyCode==KeyEvent.VK_UP)
-			mc.up();
+			MovingCircle2.up();
 		if(keyCode==KeyEvent.VK_DOWN)
-			mc.down();	
+			MovingCircle2.down();	
 		if(keyCode==KeyEvent.VK_RIGHT)
-			mc.right();
+			MovingCircle2.right();
 		if(keyCode==KeyEvent.VK_LEFT)
-			mc.left();
+			MovingCircle2.left();
 	}
 
 	@Override
 	public void keyReleased(KeyEvent arg0) {
 		// TODO Auto-generated method stub
-		mc.moveX=0;
-		mc.moveY=0;
+		MovingCircle2.moveX=0;
+		MovingCircle2.moveY=0;
 	}
 
 	@Override
